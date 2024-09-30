@@ -1,0 +1,236 @@
+.homepage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.homepage h1 {
+  font-size: 3rem;
+  font-weight: 700; 
+  background: linear-gradient(90deg, #c55580, #5188db); 
+  background-clip: text; 
+  -webkit-background-clip: text; 
+  color: transparent;
+  letter-spacing: 2px; 
+  text-transform: uppercase; 
+}
+
+
+.single_product {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid rgb(184, 46, 46);
+  border-radius: 16px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+&:hover{
+  box-shadow: 0px 0px 12px rgb(184, 46, 46);
+}}
+
+.single_product div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(184, 46, 46);
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  width: 100%;
+  padding-bottom: 1rem;
+  padding-top: 5px;
+  color: white;
+  font-size: 1rem;
+  gap: 5px;
+}
+
+.single_product div section{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  margin-top: 5px;
+}
+
+.single_product div section button{
+  background-color: white;
+  padding: 10px;
+  transition: all 0.2s ease-in;
+  border-radius: 14px;
+  border: none;
+  color: white;
+&:hover{
+  opacity: 0.8;
+}}
+
+.single_product div section button:nth-child(1){
+  background-color: rgb(99, 180, 110);
+  box-shadow: 0px 0px 12px rgb(99, 180, 110);
+}
+
+.single_product div section button:nth-child(2){
+  background-color: rgb(235, 134, 134);
+  box-shadow: 0px 0px 12px rgb(235, 134, 134);
+}
+
+.single_product img {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+}
+
+.all_items li{
+  list-style-type: none;
+  margin-bottom: 2rem;
+}
+
+.all_items {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(1, 1fr); 
+}
+
+.singleitem_detailed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+  border-bottom: 1px solid red;
+  margin-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+.singleitem_detailed a{
+  color: rgb(80, 73, 73);
+  text-decoration: underline;
+}
+
+.singleitem_detailed h2{
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.singleitem_detailed section{
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.singleitem_detailed section div{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+}
+
+.buttons_section {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.buttons_section button{
+  padding: 1rem;
+  transition: all 0.2s ease-in;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0px 0px 16px rgb(235, 134, 134);
+}
+
+.buttons_section button:nth-child(1){
+  background-color: rgb(184, 46, 46);
+  color: white;
+&:hover{
+  box-shadow: 0px 0px 24px rgb(184, 46, 46);
+}}
+
+.buttons_section button:nth-child(2){
+
+}
+
+.singleitem_detailed img {
+  height: 350px;
+  width: 350px;
+  object-fit: cover;
+}
+
+.cart_page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.single_fav {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem;
+}
+
+.single_fav li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid rgb(184, 46, 46);
+  justify-content: space-between;
+  gap: 1rem;
+  color: rgb(97, 89, 89);
+  border-radius: 12px;
+  transition: all 0.2s ease-in;
+&:hover{
+  box-shadow: 0px 0px 20px rgb(184, 46, 46);
+}}
+
+.single_fav button:nth-child(1){
+  background-color: green;
+&:hover{
+  box-shadow: 0px 0px 12px green;
+}}
+
+.single_fav button{
+  border: none;
+  padding: 6px;
+  border-radius: 12px;
+  transition: all 0.2s ease-in;
+  margin-right: 10px;
+  background-color: rgb(184, 46, 46);
+  box-shadow: 0px 0px 12px white;
+  color: white;
+  transition: all 0.2s ease-in;
+&:hover{
+  box-shadow: 0px 0px 12px rgb(184, 46, 46);
+}}
+
+.single_fav img {
+  height: 150px;
+  width: 150px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+@media (min-width: 600px) {
+  .all_items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .all_items {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.search_input {
+  border: 1px solid black;
+  width: 100%;
+  border-radius: 9px;
+  padding: 6px;
+}
